@@ -21,7 +21,7 @@ const Title = styled.h3`
 `;
 
 const CoverBg = styled.div`
-  height: 400px;
+  height: 650px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
   border-radius: 15px;
@@ -41,8 +41,8 @@ const MovieTitle = styled.h4`
 `;
 
 const params = {
-  spaceBetween: 20,
-  slidesPerView: 4.5,
+  spaceBetween: 40,
+  slidesPerView: 3.5,
   breakpoints: {
     1024: {
       spaceBetween: 20,
@@ -59,13 +59,13 @@ const params = {
   },
 };
 
-export const ShowMovie = ({ titleName, movieData }) => {
+export const Nowmovie = ({ titleName, NowData }) => {
   return (
     <Container>
       <Title>{titleName}</Title>
 
       <Swiper {...params}>
-        {movieData.map((data) => (
+        {NowData.map((data) => (
           <SwiperSlide key={data.id}>
             <Link to={`/detail/${data.id}`}>
               <CoverBg $bgUrl={data.poster_path} />
