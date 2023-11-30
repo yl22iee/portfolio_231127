@@ -11,9 +11,9 @@ const Container = styled.section`
 `;
 
 const Title = styled.h3`
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   @media screen and (max-width: 450px) {
     font-size: 30px;
     margin-bottom: 30px;
@@ -24,7 +24,7 @@ const CoverBg = styled.div`
   height: 400px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 20px;
   @media screen and (max-width: 450px) {
     height: 150px;
@@ -33,7 +33,7 @@ const CoverBg = styled.div`
 `;
 
 const MovieTitle = styled.h4`
-  font-size: 18px;
+  font-size: 17px;
   @media screen and (max-width: 450px) {
     font-size: 16px;
     line-height: 22px;
@@ -41,8 +41,8 @@ const MovieTitle = styled.h4`
 `;
 
 const params = {
-  spaceBetween: 20,
-  slidesPerView: 4.5,
+  spaceBetween: 15,
+  slidesPerView: 6.5,
   breakpoints: {
     1024: {
       spaceBetween: 20,

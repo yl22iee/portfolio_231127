@@ -20,6 +20,11 @@ const ConHeader = styled.header`
 const Logo = styled.div`
   font-size: 22px;
   font-weight: 600;
+  color: crimson;
+  i {
+    margin-right: 10px;
+    color: crimson;
+  }
 `;
 
 const Menu = styled.ul`
@@ -38,7 +43,8 @@ export const Header = () => {
   return (
     <ConHeader>
       <Logo>
-        <Link to={routes.home}>WhatUp</Link>
+        <i class="fa-brands fa-yahoo"></i>
+        <Link to={routes.home}>NETFELX</Link>
       </Logo>
 
       <Menu>

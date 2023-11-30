@@ -8,6 +8,7 @@ import { Signup } from "./pages/login/Signup";
 import { SearchId } from "./pages/login/SearchId";
 import { PageNotFound } from "./PageNotFound";
 import { Header } from "./components/header/Header";
+import { Footer } from "./components/footer/Footer";
 
 const Router = () => {
   return (
@@ -23,6 +24,8 @@ const Router = () => {
         <Route path={routes.searchID} element={<SearchId />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
+
+      <Footer />
     </HashRouter>
   );
 };

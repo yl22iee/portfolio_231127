@@ -11,6 +11,8 @@ const Container = styled.section`
 `;
 
 const Title = styled.h3`
+  display: flex;
+  justify-content: center;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 50px;

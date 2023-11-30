@@ -26,3 +26,9 @@ export const PopPlaying = () =>
 
 export const Updatemov = () =>
   fetch(UpdateUrl, options).then((res) => res.json());
+
+export const movieSearch = (keyword) => {
+  const SearchUrl =
+    baseurl + `search/movie?query=${keyword}` + `&language=ko-kr`;
+  fetch(SearchUrl, options).then((res) => res.json());
+};

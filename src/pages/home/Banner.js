@@ -1,8 +1,15 @@
 import { styled } from "styled-components";
 import { IMG_URL } from "../../constants";
 
+const Button = styled.button`
+  padding: 10px;
+  i {
+    margin-right: 6px;
+  }
+`;
+
 const MainBanner = styled.div`
-  height: 80vh;
+  height: 90vh;
   background-color: lightgray;
   padding: 400px 5%;
   position: relative;
@@ -19,7 +26,6 @@ const MainBanner = styled.div`
     max-width: 750px;
     font-size: 80px;
     font-weight: 700;
-    margin-bottom: 20px;
     margin-bottom: 25px;
     letter-spacing: -3px;
     line-height: 100px;
@@ -31,6 +37,7 @@ const MainBanner = styled.div`
     font-weight: 600;
     opacity: 0.7;
     line-height: 28px;
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: 450px) {
@@ -65,6 +72,10 @@ export const Banner = ({ data }) => {
       <BlackBg />
       <h3>{data.title}</h3>
       <p>{data.overview}</p>
+      <Button>
+        <i class="fa-solid fa-circle-info"></i>
+        상세내용
+      </Button>
     </MainBanner>
   );
 };

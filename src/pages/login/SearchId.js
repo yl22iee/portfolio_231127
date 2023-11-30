@@ -13,7 +13,9 @@ const LoginForm = styled.form`
   flex-direction: column;
   align-items: center;
   padding: 100px 20px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-bottom: 7%;
 `;
 
 const Title = styled.div`
@@ -28,10 +30,10 @@ const Input = styled.input`
   box-sizing: border-box;
   width: 100%;
   height: 50px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 0 10px;
-  margin-top: 5px;
+  margin-top: 8px;
 `;
 
 const Button = styled.button`
