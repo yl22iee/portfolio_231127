@@ -28,7 +28,7 @@ const Logo = styled.div`
 `;
 
 const Menu = styled.ul`
-  width: 13%;
+  width: 360px;
   font-size: 20px;
   font-weight: 600;
   display: flex;
@@ -36,6 +36,10 @@ const Menu = styled.ul`
   align-items: center;
   li {
     margin-left: 10%;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 15px;
   }
 `;
 

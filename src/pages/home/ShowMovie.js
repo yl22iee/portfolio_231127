@@ -34,10 +34,6 @@ const CoverBg = styled.div`
 
 const MovieTitle = styled.h4`
   font-size: 17px;
-  @media screen and (max-width: 450px) {
-    font-size: 16px;
-    line-height: 22px;
-  }
 `;
 
 const params = {
@@ -54,7 +50,7 @@ const params = {
     },
     320: {
       spaceBetween: 10,
-      slidesPerView: 3.2,
+      slidesPerView: 2.2,
     },
   },
 };

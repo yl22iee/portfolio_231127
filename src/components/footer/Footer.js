@@ -11,5 +11,5 @@ const Container = styled.div`
 `;
 
 export const Footer = () => {
-  return <Container>&made by; 2023 DowonLee</Container>;
+  return <Container>&copy right; 2023 DowonLee</Container>;
 };

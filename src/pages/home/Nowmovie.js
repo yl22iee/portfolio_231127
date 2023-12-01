@@ -23,9 +23,9 @@ const Title = styled.h3`
 `;
 
 const CoverBg = styled.div`
-  height: 650px;
-  background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
-    cover;
+  height: 550px;
+  background: url(${IMG_URL}/original/${(props) => props.$bgUrl}) no-repeat
+    center / cover;
   border-radius: 15px;
   margin-bottom: 20px;
   @media screen and (max-width: 450px) {
