@@ -29,6 +29,7 @@ export const Home = () => {
       try {
         const { results: nowResults } = await nowPlaying();
         setNowPlayingData(nowResults);
+        // console.log(nowResults);
 
         const { results: topResults } = await TopPlaying();
         setTopData(topResults);

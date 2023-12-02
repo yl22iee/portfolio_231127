@@ -1,28 +1,24 @@
-import { useState } from "react";
-import { Form, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { movieSearch } from "../../api";
-import { styled } from "styled-components";
-import { Layout } from "../../components/Layout";
+import { useState } from "react";
+import { Layout } from "../home/Layout";
+import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 
 const Title = styled.h3`
-  /* font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10%; */
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0 5%;
+  margin-bottom: 10px;
 `;
 
-const SearchForm = styled.form`
-  padding: 20px 0 0 230px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+const Form = styled.form`
+  padding: 0 5%;
 `;
 
 const Input = styled.input`
-  padding: 10px;
+  width: 16%;
+  padding: 5px;
 `;
 
 const ConWrap = styled.div`
@@ -43,34 +39,40 @@ const Bg = styled.div`
 const MovieTitle = styled.div``;
 
 export const Search = () => {
-  const { register, handleSubmit } = useForm({
+  //api에 검색 요청에 맞게 url연결과 매개변수 작성할것
+  //form 사용시 useForm 사용할것
+  const {
+    register,
+    handleSubmit,
+    // formState: { errors, isValid },
+  } = useForm({
     mode: "onSubmit",
   });
-
   const [term, setTerm] = useState();
 
   const searchHandler = async (data) => {
     const { search: keyword } = data;
     try {
-      const { results } = await movieSearch();
+      const { results } = await movieSearch(keyword);
       setTerm(results);
     } catch (error) {
-      console.log("Error : " + error);
+      console.log(error);
     }
   };
 
   return (
     <div>
-      <SearchForm onSubmit={handleSubmit(searchHandler)}>
-        {/* <Title>찾으시는 영화가 있으신가요?</Title> */}
+      <Title style={{ marginTop: "150px" }}>찾으시는 영화가 있으신가요?</Title>
+
+      <Form onSubmit={handleSubmit(searchHandler)}>
         <Input
           {...register("search", {
             required: "검색 내용을 입력해주세요.",
           })}
           type="text"
-          placeholder="영화,드라마 검색"
+          placeholder="검색내용"
         />
-      </SearchForm>
+      </Form>
 
       <Layout>
         {term && (

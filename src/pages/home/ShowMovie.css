@@ -1,0 +1,7 @@
+.photo {
+  width: 400px;
+  height: 250;
+  box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
+}

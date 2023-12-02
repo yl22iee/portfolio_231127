@@ -4,6 +4,7 @@ import { Loading } from "../../components/Loading";
 import { movieDetail } from "../../api";
 import { useParams } from "react-router-dom";
 import { IMG_URL } from "../../constants";
+import "./Detail.css";
 
 const Container = styled.div`
   padding: 100px 150px 150px;
@@ -20,6 +21,9 @@ const Bg = styled.div`
   background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat center /
     cover;
   border-radius: 10px;
+  box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
   @media screen and (max-width: 450px) {
     width: 100%;
     height: 500px;
@@ -102,7 +106,7 @@ export const Detail = () => {
         <Loading />
       ) : (
         <Container>
-          <Bg $bgUrl={DetailData.poster_path} />
+          <Bg className="photo" $bgUrl={DetailData.poster_path} />
           <Con>
             <Title>{DetailData.title}</Title>
             <Rated>평점 : {Math.round(DetailData.vote_average)}</Rated>
