@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import "./ShowMovie.css";
+// import "./ShowMovie.css";
 
 const Container = styled.section`
   margin-bottom: 80px;
@@ -17,7 +17,7 @@ const Title = styled.h3`
   margin-bottom: 30px;
 
   @media screen and (max-width: 450px) {
-    font-size: 20px;
+    font-size: 35px;
     margin-bottom: 30px;
   }
 `;
@@ -39,7 +39,7 @@ const MovieTitle = styled.h4`
   font-size: 17px;
 
   @media screen and (max-width: 450px) {
-    font-size: 14px;
+    font-size: 18px;
   }
 `;
 

@@ -35,11 +35,6 @@ const Bg = styled.div`
   -webkit-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
 
-  @media screen and (max-width: 670px) {
-    width: 40%;
-    height: 400px;
-  }
-
   @media screen and (max-width: 450px) {
     width: 100%;
     height: 500px;

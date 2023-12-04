@@ -35,6 +35,7 @@ const MainBanner = styled.div`
 
   @media screen and (max-width: 450px) {
     height: 60vh;
+    margin-bottom: 0px;
 
     h3 {
       font-size: 40px;
@@ -68,10 +69,6 @@ export const Banner = ({ data }) => {
       <BlackBg />
       <h3>{data.title}</h3>
       <p>{data.overview}</p>
-      {/* <Button>
-        <i class="fa-solid fa-circle-info"></i>
-        상세내용
-      </Button> */}
     </MainBanner>
   );
 };

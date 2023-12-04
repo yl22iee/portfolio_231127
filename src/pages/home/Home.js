@@ -10,14 +10,18 @@ import { Banner } from "./Banner";
 import "swiper/css";
 import { ShowMovie } from "./ShowMovie";
 import { Loading } from "../../components/Loading";
-import { Layout } from "./Layout";
 import { Nowmovie } from "./Nowmovie";
+import { styled } from "styled-components";
+
+const Layout = styled.div`
+  padding: 150px 5%;
+
+  @media screen and (max-width: 450px) {
+    padding: 80px 5%;
+  }
+`;
 
 export const Home = () => {
-  //1. 마운트시 api에 요청
-  // 2.비동기 통신
-  // 3.예외 처리
-
   const [nowPlayingData, setNowPlayingData] = useState();
   const [topData, setTopData] = useState();
   const [popData, setpopData] = useState();

@@ -18,11 +18,11 @@ const Title = styled.h3`
   margin-bottom: 50px;
 
   @media screen and (max-width: 1080px) {
-    font-size: 25px;
+    font-size: 35px;
   }
 
   @media screen and (max-width: 450px) {
-    font-size: 20px;
+    font-size: 35px;
     margin-bottom: 30px;
   }
 `;
@@ -48,11 +48,11 @@ const MovieTitle = styled.h4`
   font-size: 18px;
 
   @media screen and (max-width: 1080px) {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   @media screen and (max-width: 450px) {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
   }
 `;

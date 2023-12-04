@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { routes } from "../../routes";
 import { styled } from "styled-components";
+import { useEffect, useRef } from "react";
 
 const ConHeader = styled.header`
   width: 100%;
@@ -48,11 +49,32 @@ const Menu = styled.ul`
 `;
 
 export const Header = () => {
+  const headRef = useRef();
+  console.log(headRef);
+
+  const scrollHandler = () => {
+    const pageY = window.scrollY;
+    console.log(pageY);
+
+    if (pageY > 300) {
+      headRef.current.style.position = "fixed";
+      headRef.current.style.backgroundColor = "raba(0,0,0,0.7)";
+      headRef.current.style.backdropFilter = "blur(2px)";
+    } else {
+      headRef.current.style.position = "absolute";
+      headRef.current.style.backgroundColor = "transparent";
+      headRef.current.style.backdropFilter = "blur(0px)";
+    }
+  };
+
+  useEffect(() => {
+    return window.addEventListener("scroll", scrollHandler);
+  }, []);
+
   return (
-    <ConHeader>
+    <ConHeader ref={headRef}>
       <Logo>
-        <i class="fa-brands fa-yahoo"></i>
-        <Link to={routes.home}>NETFELX</Link>
+        <Link to={routes.home}>WONMOVIE</Link>
       </Logo>
 
       <Menu>

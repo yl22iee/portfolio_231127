@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { movieSearch } from "../../api";
 import { useState } from "react";
-import { Layout } from "../home/Layout";
+// import { Layout } from "../home/Layout";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 
@@ -31,6 +31,19 @@ const ConWrap = styled.div`
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
   row-gap: 50px;
+
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Layout = styled.div`
+  padding: 150px 5%;
+
+  @media screen and (max-width: 450px) {
+    padding: 60px 5%;
+  }
 `;
 
 const Con = styled.div``;
@@ -39,9 +52,18 @@ const Bg = styled.div`
   height: 300px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
+  border-radius: 10px;
+
+  @media screen and (max-width: 450px) {
+    height: 250px;
+  }
 `;
 
-const MovieTitle = styled.div``;
+const MovieTitle = styled.div`
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+`;
 
 export const Search = () => {
   const { register, handleSubmit } = useForm({
