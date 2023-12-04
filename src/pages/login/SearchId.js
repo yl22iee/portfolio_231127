@@ -16,6 +16,13 @@ const LoginForm = styled.form`
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   margin-bottom: 7%;
+
+  @media screen and (max-width: 450px) {
+    max-width: 340px;
+    height: 500px;
+    padding: 4rem 1rem;
+    margin-top: 60px;
+  }
 `;
 
 const Title = styled.div`
@@ -23,6 +30,10 @@ const Title = styled.div`
   font-size: 43px;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 450px) {
+    font-size: 30px;
+  }
 `;
 
 const Input = styled.input`
@@ -34,6 +45,11 @@ const Input = styled.input`
   border-radius: 10px;
   padding: 0 10px;
   margin-top: 8px;
+
+  @media screen and (max-width: 450px) {
+    padding: 0.2rem 0.5rem;
+    font-size: 14px;
+  }
 `;
 
 const Button = styled.button`
@@ -49,12 +65,21 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 20px;
   opacity: ${(props) => (props.$isActive ? "pointer" : "default")};
+
+  @media screen and (max-width: 450px) {
+    height: 45px;
+    font-size: 16px;
+  }
 `;
 
 const BottomInfo = styled.div`
   font-size: 20px;
   font-size: 700;
   margin-top: 30px;
+
+  @media screen and (max-width: 450px) {
+    font-size: 17px;
+  }
 `;
 
 export const SearchId = () => {

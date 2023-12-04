@@ -15,6 +15,13 @@ const LoginForm = styled.form`
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   margin-bottom: 7%;
+
+  @media screen and (max-width: 450px) {
+    margin-top: 50px;
+    max-width: 300px;
+    height: 500px;
+    padding: 4rem 1rem;
+  }
 `;
 
 const Title = styled.div`
@@ -22,6 +29,10 @@ const Title = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 450px) {
+    font-size: 30px;
+  }
 `;
 
 const Input = styled.input`
@@ -33,6 +44,11 @@ const Input = styled.input`
   border-radius: 10px;
   padding: 0 10px;
   margin-top: 5px;
+
+  @media screen and (max-width: 450px) {
+    padding: 0.1rem 0.6rem;
+    font-size: 14px;
+  }
 `;
 
 const Button = styled.button`
@@ -48,6 +64,12 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 20px;
   opacity: ${(props) => (props.$isActive ? "pointer" : "default")};
+
+  @media screen and (max-width: 450px) {
+    margin-top: 15px;
+    height: 40px;
+    font-size: 17px;
+  }
 `;
 
 const ErrorMessage = styled.div``;

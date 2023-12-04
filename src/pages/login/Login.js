@@ -16,6 +16,17 @@ const LoginForm = styled.form`
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   margin-bottom: 7%;
+
+  @media screen and (max-width: 450px) {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    max-width: 350px;
+    height: 500px;
+  }
+
+  margin-top: 80px;
+  margin-bottom: 50px;
+  max-width: 350px;
 `;
 
 const Title = styled.div`
@@ -23,6 +34,10 @@ const Title = styled.div`
   font-size: 43px;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 460px) {
+    font-size: 32px;
+  }
 `;
 
 const Input = styled.input`
@@ -34,6 +49,11 @@ const Input = styled.input`
   border-radius: 10px;
   padding: 0 10px;
   margin-top: 5px;
+
+  @media screen and (max-width: 460px) {
+    padding: 0.8rem 0.5rem;
+    font-size: 13px;
+  }
 `;
 
 const Button = styled.button`
@@ -49,12 +69,22 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 20px;
   opacity: ${(props) => (props.$isActive ? "pointer" : "default")};
+
+  @media screen and (max-width: 460px) {
+    padding: 0.6rem 0.5rem;
+    font-size: 13px;
+  }
 `;
 
 const BottomInfo = styled.div`
   font-size: 20px;
   font-size: 700;
   margin-top: 30px;
+
+  @media screen and (max-width: 460px) {
+    padding: 0.2rem 0.5rem;
+    font-size: 13px;
+  }
 `;
 
 const Searchpasswd = styled.div`

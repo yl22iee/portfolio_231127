@@ -25,6 +25,9 @@ const Logo = styled.div`
     margin-right: 10px;
     color: crimson;
   }
+  @media screen and (max-width: 450px) {
+    font-size: 15px;
+  }
 `;
 
 const Menu = styled.ul`
@@ -40,6 +43,7 @@ const Menu = styled.ul`
 
   @media screen and (max-width: 450px) {
     font-size: 15px;
+    width: 200px;
   }
 `;
 

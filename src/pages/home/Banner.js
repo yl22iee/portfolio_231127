@@ -1,13 +1,6 @@
 import { styled } from "styled-components";
 import { IMG_URL } from "../../constants";
 
-const Button = styled.button`
-  padding: 10px;
-  i {
-    margin-right: 6px;
-  }
-`;
-
 const MainBanner = styled.div`
   height: 90vh;
   background-color: lightgray;
@@ -41,13 +34,16 @@ const MainBanner = styled.div`
   }
 
   @media screen and (max-width: 450px) {
+    height: 60vh;
+
     h3 {
-      font-size: 50px;
+      font-size: 40px;
       line-height: 65px;
     }
 
     p {
-      font-size: 16px;
+      max-width: 280px;
+      font-size: 13px;
     }
   }
 `;
@@ -72,10 +68,10 @@ export const Banner = ({ data }) => {
       <BlackBg />
       <h3>{data.title}</h3>
       <p>{data.overview}</p>
-      <Button>
+      {/* <Button>
         <i class="fa-solid fa-circle-info"></i>
         상세내용
-      </Button>
+      </Button> */}
     </MainBanner>
   );
 };

@@ -11,6 +11,10 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 0.8rem;
+    margin-top: 70px;
   }
 `;
 

@@ -16,8 +16,13 @@ const Title = styled.h3`
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 1080px) {
+    font-size: 25px;
+  }
+
   @media screen and (max-width: 450px) {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
 `;
@@ -28,6 +33,11 @@ const CoverBg = styled.div`
     center / cover;
   border-radius: 15px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1080px) {
+    height: 350px;
+  }
+
   @media screen and (max-width: 450px) {
     height: 150px;
     margin-bottom: 15px;
@@ -36,6 +46,11 @@ const CoverBg = styled.div`
 
 const MovieTitle = styled.h4`
   font-size: 18px;
+
+  @media screen and (max-width: 1080px) {
+    font-size: 17px;
+  }
+
   @media screen and (max-width: 450px) {
     font-size: 16px;
     line-height: 22px;
@@ -52,11 +67,11 @@ const params = {
     },
     640: {
       spaceBetween: 15,
-      slidesPerView: 4.3,
+      slidesPerView: 3.5,
     },
     320: {
       spaceBetween: 10,
-      slidesPerView: 3.2,
+      slidesPerView: 1.2,
     },
   },
 };

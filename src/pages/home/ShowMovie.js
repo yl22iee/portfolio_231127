@@ -15,8 +15,9 @@ const Title = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 30px;
+
   @media screen and (max-width: 450px) {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
 `;
@@ -27,14 +28,19 @@ const CoverBg = styled.div`
     cover;
   border-radius: 10px;
   margin-bottom: 20px;
+
   @media screen and (max-width: 450px) {
-    height: 150px;
+    height: 250px;
     margin-bottom: 15px;
   }
 `;
 
 const MovieTitle = styled.h4`
   font-size: 17px;
+
+  @media screen and (max-width: 450px) {
+    font-size: 14px;
+  }
 `;
 
 const params = {
