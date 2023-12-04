@@ -10,6 +10,12 @@ const Container = styled.div`
   padding: 100px 150px 150px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 670px) {
+    margin-top: 90px;
+    padding: 0.8rem 0.5rem;
+  }
+
   @media screen and (max-width: 450px) {
     display: flex;
     flex-direction: column;
@@ -28,6 +34,12 @@ const Bg = styled.div`
   box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 13px 32px -4px rgba(0, 0, 0, 0.75);
+
+  @media screen and (max-width: 670px) {
+    width: 40%;
+    height: 400px;
+  }
+
   @media screen and (max-width: 450px) {
     width: 100%;
     height: 500px;
@@ -48,6 +60,11 @@ const Title = styled.div`
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 670px) {
+    font-size: 34px;
+  }
+
   @media screen and (max-width: 450px) {
     font-size: 30px;
   }

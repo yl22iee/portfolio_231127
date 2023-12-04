@@ -6,19 +6,24 @@ import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 
 const Title = styled.h3`
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   padding: 0 5%;
   margin-bottom: 10px;
 `;
 
-const Form = styled.form`
+const SearchForm = styled.form`
   padding: 0 5%;
 `;
 
 const Input = styled.input`
-  width: 16%;
-  padding: 5px;
+  width: 20%;
+  padding: 0.5rem 0.8rem;
+
+  @media screen and (max-width: 460px) {
+    padding: 0.5rem 0.5rem;
+    width: 80%;
+  }
 `;
 
 const ConWrap = styled.div`
@@ -39,13 +44,7 @@ const Bg = styled.div`
 const MovieTitle = styled.div``;
 
 export const Search = () => {
-  //api에 검색 요청에 맞게 url연결과 매개변수 작성할것
-  //form 사용시 useForm 사용할것
-  const {
-    register,
-    handleSubmit,
-    // formState: { errors, isValid },
-  } = useForm({
+  const { register, handleSubmit } = useForm({
     mode: "onSubmit",
   });
   const [term, setTerm] = useState();
@@ -64,7 +63,7 @@ export const Search = () => {
     <div>
       <Title style={{ marginTop: "150px" }}>찾으시는 영화가 있으신가요?</Title>
 
-      <Form onSubmit={handleSubmit(searchHandler)}>
+      <SearchForm onSubmit={handleSubmit(searchHandler)}>
         <Input
           {...register("search", {
             required: "검색 내용을 입력해주세요.",
@@ -72,7 +71,7 @@ export const Search = () => {
           type="text"
           placeholder="검색내용"
         />
-      </Form>
+      </SearchForm>
 
       <Layout>
         {term && (

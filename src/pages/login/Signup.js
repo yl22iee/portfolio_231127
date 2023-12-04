@@ -16,6 +16,10 @@ const LoginForm = styled.form`
   border-radius: 10px;
   margin-bottom: 7%;
 
+  @media screen and (max-width: 670px) {
+    margin-top: 70px;
+  }
+
   @media screen and (max-width: 450px) {
     margin-top: 50px;
     max-width: 300px;
@@ -46,6 +50,7 @@ const Input = styled.input`
   margin-top: 5px;
 
   @media screen and (max-width: 450px) {
+    height: 40px;
     padding: 0.1rem 0.6rem;
     font-size: 14px;
   }
