@@ -5,11 +5,23 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-size: 17px;
   opacity: 0.6;
   border-top: 1px solid rgba(255, 255, 255, 0.6);
+  p {
+    margin-bottom: 1%;
+  }
 `;
 
 export const Footer = () => {
-  return <Container>&copy right; 2023 DowonLee</Container>;
+  return (
+    <Container>
+      <p>&copy right; 2023 DowonLee</p>
+      <p>
+        Contact webmaster for more information.
+        https://github.com/yl22iee/portfolio_231127
+      </p>
+    </Container>
+  );
 };

@@ -5,6 +5,7 @@ import { movieDetail } from "../../api";
 import { useParams } from "react-router-dom";
 import { IMG_URL } from "../../constants";
 import "./Detail.css";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Container = styled.div`
   padding: 100px 150px 150px;
@@ -102,6 +103,7 @@ export const Detail = () => {
   const { id } = useParams();
   const [isloading, setisloading] = useState(true);
   const [DetailData, setDetailData] = useState();
+  useScrollTop();
 
   useEffect(() => {
     (async () => {

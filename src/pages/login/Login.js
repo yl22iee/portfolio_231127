@@ -94,6 +94,8 @@ const Searchpasswd = styled.div`
   text-decoration: none;
 `;
 
+const ErrorMessage = styled.div``;
+
 export const Login = () => {
   const {
     register,
@@ -116,6 +118,7 @@ export const Login = () => {
           type="text"
           placeholder="이메일주소를 입력해주세요"
         />
+        <ErrorMessage text={errors?.username?.message} />
         <Input
           {...register("password", {
             required: "비밀번호는 필수입니다.",

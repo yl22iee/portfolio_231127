@@ -4,6 +4,7 @@ import { useState } from "react";
 // import { Layout } from "../home/Layout";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
+import { Link } from "react-router-dom";
 
 const Title = styled.h3`
   font-size: 20px;
@@ -100,8 +101,10 @@ export const Search = () => {
           <ConWrap>
             {term.map((data) => (
               <Con key={data.id}>
-                <Bg $bgUrl={data.backdrop_path} />
-                <MovieTitle>{data.title}</MovieTitle>
+                <Link to={`/search/${data.id}`}>
+                  <Bg $bgUrl={data.backdrop_path} />
+                  <MovieTitle>{data.title}</MovieTitle>
+                </Link>
               </Con>
             ))}
           </ConWrap>
