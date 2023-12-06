@@ -99,6 +99,21 @@ const Desc = styled.div`
   }
 `;
 
+const Overview = styled.div`
+  max-width: 700px;
+  font-size: 20px;
+  margin-top: 20px;
+  p {
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+
+  @media screen and (max-width: 450px) {
+    max-width: 350px;
+    font-size: 15px;
+  }
+`;
+
 export const Detail = () => {
   const { id } = useParams();
   const [isloading, setisloading] = useState(true);
@@ -135,6 +150,9 @@ export const Detail = () => {
             </Genres>
             <Release>개봉 예정일 : {DetailData.release_date}</Release>
             <Runtime>상영 시간 : {DetailData.runtime} 분</Runtime>
+            <Overview>
+              영화 줄거리 : <p>{DetailData.overview}</p>
+            </Overview>
             <Desc></Desc>
           </Con>
         </Container>

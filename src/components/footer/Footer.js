@@ -12,16 +12,19 @@ const Container = styled.div`
   p {
     margin-bottom: 1%;
   }
+
+  @media screen and (max-width: 450px) {
+    padding: 20px;
+  }
 `;
 
 export const Footer = () => {
   return (
     <Container>
-      <p>&copy right; 2023 DowonLee</p>
       <p>
-        Contact webmaster for more information.
-        https://github.com/yl22iee/portfolio_231127
+        <i class="fa-regular fa-copyright"></i> 2023 DowonLee
       </p>
+      <p>for more information. https://github.com/yl22iee/portfolio_231127</p>
     </Container>
   );
 };

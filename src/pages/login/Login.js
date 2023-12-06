@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { routes } from "../../routes";
+import { ErrorMessage } from "./ErrorMessage";
 
 const LoginForm = styled.form`
   margin: 0 auto;
@@ -48,7 +49,7 @@ const Input = styled.input`
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 0 10px;
-  margin-top: 5px;
+  margin-top: 5%;
 
   @media screen and (max-width: 460px) {
     padding: 0.8rem 0.5rem;
@@ -81,6 +82,11 @@ const BottomInfo = styled.div`
   font-size: 700;
   margin-top: 30px;
 
+  p {
+    display: inline;
+    color: lightgray;
+  }
+
   @media screen and (max-width: 460px) {
     padding: 0.2rem 0.5rem;
     font-size: 13px;
@@ -92,9 +98,10 @@ const Searchpasswd = styled.div`
   font-size: 12px;
   margin-top: 50px;
   text-decoration: none;
+  p {
+    color: lightgray;
+  }
 `;
-
-const ErrorMessage = styled.div``;
 
 export const Login = () => {
   const {
@@ -111,30 +118,42 @@ export const Login = () => {
     <>
       <LoginForm onSubmit={handleSubmit(onSubmit)}>
         <Title>로그인</Title>
+
         <Input
           {...register("username", {
-            required: "아이디는 필수 입니다.",
+            required: "email은 필수 입니다.",
           })}
-          type="text"
+          type="email"
           placeholder="이메일주소를 입력해주세요"
         />
         <ErrorMessage text={errors?.username?.message} />
+
         <Input
           {...register("password", {
-            required: "비밀번호는 필수입니다.",
+            required: "패스워드는 필수 입니다.",
+            minLength: {
+              value: 8,
+              message: "비밀번호는 최소 8자리 이상 입니다.",
+            },
           })}
           type="password"
-          placeholder="비밀번호를 입력해주세요."
+          placeholder="패스워드"
         />
+        <ErrorMessage text={errors?.password?.message} />
 
         <Button $isActive={isValid}>로그인</Button>
 
         <BottomInfo>
-          아이디가 없으신가요? <Link to={routes.signup}>회원가입</Link>
+          아이디가 없으신가요?{" "}
+          <Link to={routes.signup}>
+            <p>회원가입</p>
+          </Link>
         </BottomInfo>
 
         <Searchpasswd>
-          <Link to={routes.searchID}>아이디를 잊어버리셨나요?</Link>
+          <Link to={routes.searchID}>
+            <p>아이디를 잊어버리셨나요?</p>
+          </Link>
         </Searchpasswd>
       </LoginForm>
     </>

@@ -20,12 +20,13 @@ const ConHeader = styled.header`
 
 const Logo = styled.div`
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 900;
   color: crimson;
-  i {
-    margin-right: 10px;
+
+  p {
     color: crimson;
   }
+
   @media screen and (max-width: 450px) {
     font-size: 15px;
   }
@@ -74,7 +75,9 @@ export const Header = () => {
   return (
     <ConHeader ref={headRef}>
       <Logo>
-        <Link to={routes.home}>WONMOVIE</Link>
+        <Link to={routes.home}>
+          <p>WONMOVIE</p>
+        </Link>
       </Logo>
 
       <Menu>

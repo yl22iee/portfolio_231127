@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { ErrorMessage } from "./ErrorMessage";
 
 const LoginForm = styled.form`
   margin: 0 auto;
@@ -23,7 +23,7 @@ const LoginForm = styled.form`
   @media screen and (max-width: 450px) {
     margin-top: 50px;
     max-width: 300px;
-    height: 500px;
+    height: 450px;
     padding: 4rem 1rem;
   }
 `;
@@ -47,7 +47,7 @@ const Input = styled.input`
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 0 10px;
-  margin-top: 5px;
+  margin-top: 5%;
 
   @media screen and (max-width: 450px) {
     height: 40px;
@@ -62,7 +62,7 @@ const Button = styled.button`
   background-color: crimson;
   color: white;
   border-radius: 10px;
-  margin-top: 5%;
+  margin-top: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,8 +76,6 @@ const Button = styled.button`
     font-size: 17px;
   }
 `;
-
-const ErrorMessage = styled.div``;
 
 export const Signup = () => {
   const {
@@ -94,39 +92,35 @@ export const Signup = () => {
     <>
       <LoginForm onSubmit={handleSubmit(onSubmit)}>
         <Title>회원가입</Title>
+
         <Input
-          {...register("username", {
-            required: "사용자이름은 필수 입니다.",
+          {...register("name", {
+            required: "이름은 필수 입니다.",
           })}
           type="text"
           placeholder="이름을 입력해주세요"
         />
-        <ErrorMessage text={errors?.username?.message} />
+        <ErrorMessage text={errors?.name?.message} />
 
         <Input
           {...register("username", {
-            required: "아이디는 필수 입니다.",
+            required: "email은 필수 입니다.",
           })}
-          type="text"
+          type="email"
           placeholder="이메일주소를 입력해주세요"
         />
         <ErrorMessage text={errors?.username?.message} />
 
         <Input
           {...register("password", {
-            required: "비밀번호는 필수입니다.",
+            required: "패스워드는 필수 입니다.",
+            minLength: {
+              value: 8,
+              message: "비밀번호는 최소 8자리 이상 입니다.",
+            },
           })}
           type="password"
-          placeholder="비밀번호를 입력해주세요."
-        />
-        <ErrorMessage text={errors?.password?.message} />
-
-        <Input
-          {...register("password", {
-            required: "비밀번호는 필수입니다.",
-          })}
-          type="password"
-          placeholder="비밀번호를 재입력해주세요."
+          placeholder="패스워드"
         />
         <ErrorMessage text={errors?.password?.message} />
 
